@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: kIsWeb ? HomePageWeb() : HomePageMobile(),
+      home: MediaQuery.of(context).size.width > 650
+          ? HomePageWeb()
+          : HomePageMobile(),
     );
   }
 }
