@@ -1,6 +1,4 @@
-import 'package:dreamapp/mobile/home_page.mobile.dart';
-import 'package:dreamapp/web/home_page.web.dart';
-import 'package:flutter/foundation.dart';
+import 'package:dreamapp/responsive.layout.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,15 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.blue,
-      ),
-      home: MediaQuery.of(context).size.width > 650
-          ? HomePageWeb()
-          : HomePageMobile(),
-    );
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          primarySwatch: Colors.blue,
+        ),
+        home: const ResponsiveLayoutWidget());
   }
 }
