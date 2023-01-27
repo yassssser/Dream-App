@@ -45,17 +45,31 @@ class HomePageMobile extends StatelessWidget {
             RowWithImageWidget(
                 imageName: "Page-7.svg",
                 text: "7. Le ciel bleu révèle l'alignement"),
-            MaterialButton(
-              onPressed: () {},
-              color: Colors.green[600],
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.015,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.2),
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.06,
+                child: MaterialButton(
+                  onPressed: () {},
+                  color: Color(0xFF7bbbba),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: AppTextWidget(
+                    text: "exprimer mes rêves >".toUpperCase(),
+                    fontSize: 14,
+                    textColor: Colors.white,
+                  ),
+                ),
               ),
-              child: AppTextWidget(
-                text: "exprimer mes rêves >".toUpperCase(),
-                textColor: Colors.white,
-              ),
-            )
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.015,
+            ),
           ],
         ),
       ),
