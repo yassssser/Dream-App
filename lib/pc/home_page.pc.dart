@@ -1,5 +1,3 @@
-import 'dart:js_util';
-
 import 'package:dreamapp/common/row.widget.dart';
 import 'package:dreamapp/common/text.widget.dart';
 import 'package:flutter/material.dart';
